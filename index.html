@@ -5,9 +5,6 @@
     <link rel="icon" type="image/gif" href="https://media.giphy.com/media/YiQs87qG8tu4U/giphy.gif">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <meta http-equiv="Content-Language" content="ru">
     <style>
         body{
@@ -87,22 +84,41 @@
 </head>
 
 <body>
-<h1><i class="fa fa-birthday-cake" aria-hidden="true"></i>C Днем ​​Рождения Шаща <i class="fa fa-birthday-cake" aria-hidden="true"></i></h1>
+<audio src="https://exit.sc/?url=https%3A%2F%2Farchive.org%2Fdownload%2FDSaneHotdogJpg%2FD-Sane%2520-%2520Hotdog%2520jpg.mp3" id="soundTour">
+</audio>
+<h1>C Днем ​​Рождения Шаща </h1>
 
 <div class="parallax"></div>
 <p class="ribbon"><strong class="ribbon-content">Дорогие Друзья, <br> Я хочу что вы знаете. . .<br>Сегодня твой день</strong></p>
 
 <div class="parallax2"></div>
 
-<p class="ribbon"><strong class="ribbon-content">День ​​Рождения!!!<br>Mother Fuckles</strong></p>
+<p class="ribbon"><strong class="ribbon-content">День ​​Рождения!!!<br>Mother Fuckel's</strong></p>
+
 <div class="parallax3"></div>
 
 <p class="ribbon"><strong class="ribbon-content">Я тебя люблю</strong></p>
 <div class="parallax4"></div>
 
+<p class="ribbon"><strong class="ribbon-content">Я тебя люблю</strong></p>
+<div class="parallax4"></div><p class="ribbon"><strong class="ribbon-content">Я тебя люблю</strong></p>
+<div class="parallax4"></div><p class="ribbon"><strong class="ribbon-content">Я тебя люблю</strong></p>
+<div class="parallax4"></div>
+
 
 <script type="text/javascript">
-
+    var playing = false;
+    var audioElm = $('#soundTour').get(0);
+    $(window).scroll(function() {
+        var pageScroll = $(window).scrollTop();
+        if(!playing && pageScroll > 500 && pageScroll < 3000){
+            audioElm.play();
+            playing = true;
+        }else if(pageScroll > 3000 || pageScroll < 500){
+            audioElm.pause();
+            playing = false;
+        }
+    });
 </script>
 
 </body>
