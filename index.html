@@ -1,6 +1,6 @@
 <!Doctype html>
 <html lang="ru">
-<title>шаща</title>
+<title>саша</title>
 <head>
     <link rel="icon" type="image/gif" href="https://media.giphy.com/media/YiQs87qG8tu4U/giphy.gif">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Language" content="ru">
     <style>
         body{
-            background: linear-gradient(to right, orange, pink, orange);
+            background: linear-gradient(to right, orange, gold, pink, gold, orange);
             font-family: 'Press Start 2P', cursive;
         }
         h1{
@@ -34,7 +34,7 @@
             margin: 0 auto;
             font-size: 30px;
             word-spacing: .4em;
-            line-height: 3em;
+            line-height: 5em;
         }
         .parallax{
             background-image: url("http://s.newsweek.com/sites/www.newsweek.com/files/styles/embed-lg/public/2017/10/13/happy-birthday-president-putin-bots.jpg");
@@ -68,57 +68,63 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+        .parallax5{
+            background-image: url("https://media.giphy.com/media/13rbxwZwjw4zeg/giphy.gif");
+            min-height: 900px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
         .ribbon {
             font-size: 20px;
             width: 85%;
             position: relative;
-            background: linear-gradient(bottom, rgba(255,153,0,1), rgba(255,153,0,0.1));
-            background: -webkit-linear-gradient(bottom, rgba(255,153,0,1), rgba(255,153,0,0.1));
             color: darkgreen;
             text-align: center;
             padding: 6em;
             margin: 0 auto;
         }
 
+
+
     </style>
 </head>
 
 <body>
-<audio src="https://exit.sc/?url=https%3A%2F%2Farchive.org%2Fdownload%2FDSaneHotdogJpg%2FD-Sane%2520-%2520Hotdog%2520jpg.mp3" id="soundTour">
-</audio>
-<h1>C Днем ​​Рождения Шаща </h1>
+
+<h1>C Днем ​​Рождения саша </h1>
 
 <div class="parallax"></div>
 <p class="ribbon"><strong class="ribbon-content">Дорогие Друзья, <br> Я хочу что вы знаете. . .<br>Сегодня твой день</strong></p>
 
 <div class="parallax2"></div>
 
-<p class="ribbon"><strong class="ribbon-content">День ​​Рождения!!!<br>Mother Fuckel's</strong></p>
+<p class="ribbon" onmouseover="playSong('swifty')"><strong class="ribbon-content">День ​​Рождения!!!<br>Mother Fuckel's</strong></p>
+<audio id='swifty' src="swifty.mp3"></audio>
 
 <div class="parallax3"></div>
 
-<p class="ribbon"><strong class="ribbon-content">Я тебя люблю</strong></p>
+<p class="ribbon" onmouseout="StopSound('swifty')"><strong class="ribbon-content">Я тебя люблю</strong></p>
 <div class="parallax4"></div>
 
-<p class="ribbon"><strong class="ribbon-content">Я тебя люблю</strong></p>
-<div class="parallax4"></div><p class="ribbon"><strong class="ribbon-content">Я тебя люблю</strong></p>
-<div class="parallax4"></div><p class="ribbon"><strong class="ribbon-content">Я тебя люблю</strong></p>
-<div class="parallax4"></div>
+<p class="ribbon"><strong class="ribbon-content">Еще через тринадцать лет, когда твои пятьдесят, я думаю, ты будешь чем-то вроде этого :P</strong></p>
+<div class="parallax5"></div>
+<p class="ribbon"><strong class="ribbon-content">Но серьезно, я очень горжусь твоими достижениями.<br>я уверен, что в следующем году будет еще много.
+<br>Я восхищаюсь твоей постоянной инновацией.<br>Дорогой яноткинс,<br>Я желаю тебя счастливого дня рождения.<br> = ^ . ^ =</strong></p>
 
 
 <script type="text/javascript">
-    var playing = false;
-    var audioElm = $('#soundTour').get(0);
-    $(window).scroll(function() {
-        var pageScroll = $(window).scrollTop();
-        if(!playing && pageScroll > 500 && pageScroll < 3000){
-            audioElm.play();
-            playing = true;
-        }else if(pageScroll > 3000 || pageScroll < 500){
-            audioElm.pause();
-            playing = false;
-        }
-    });
+    function playSong(soundobj) {
+        var thissound=document.getElementById(soundobj);
+        thissound.play();
+    }
+    function StopSound(soundobj) {
+        var thissound=document.getElementById(soundobj);
+        thissound.pause();
+        thissound.currentTime = 0;
+    }
 </script>
 
 </body>
